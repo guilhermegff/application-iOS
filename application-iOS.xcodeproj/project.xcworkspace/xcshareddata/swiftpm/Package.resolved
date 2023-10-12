@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "xcframework-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/guilhermegff/xcframework-package",
+      "state" : {
+        "revision" : "082fdc953936ff3448453875231d313789a4a72e",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}

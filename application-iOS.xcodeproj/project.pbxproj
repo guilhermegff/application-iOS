@@ -18,8 +18,7 @@
 		4346C3B52AD73DA40058EE3E /* application_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4346C3B42AD73DA40058EE3E /* application_iOSUITestsLaunchTests.swift */; };
 		4346C3C32AD73E480058EE3E /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4346C3C22AD73E480058EE3E /* DemoView.swift */; };
 		4346C3C92AD741A30058EE3E /* DemoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4346C3C82AD741A30058EE3E /* DemoView.xib */; };
-		4346C3D02AD74BDC0058EE3E /* XIBLoadable.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4346C3CF2AD74BDC0058EE3E /* XIBLoadable.xcframework */; };
-		4346C3D12AD74BDC0058EE3E /* XIBLoadable.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4346C3CF2AD74BDC0058EE3E /* XIBLoadable.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4346C3D82AD79C6F0058EE3E /* XIBLoadablePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 4346C3D72AD79C6F0058EE3E /* XIBLoadablePackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,20 +38,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		4346C3D22AD74BDC0058EE3E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4346C3D12AD74BDC0058EE3E /* XIBLoadable.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		4346C38E2AD73DA30058EE3E /* application-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "application-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4346C3912AD73DA30058EE3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +54,6 @@
 		4346C3B42AD73DA40058EE3E /* application_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = application_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4346C3C22AD73E480058EE3E /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
 		4346C3C82AD741A30058EE3E /* DemoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoView.xib; sourceTree = "<group>"; };
-		4346C3CF2AD74BDC0058EE3E /* XIBLoadable.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = XIBLoadable.xcframework; path = ../output/XIBLoadable.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4346C3D02AD74BDC0058EE3E /* XIBLoadable.xcframework in Frameworks */,
+				4346C3D82AD79C6F0058EE3E /* XIBLoadablePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +147,6 @@
 		4346C3CA2AD746B80058EE3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4346C3CF2AD74BDC0058EE3E /* XIBLoadable.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,13 +161,15 @@
 				4346C38A2AD73DA30058EE3E /* Sources */,
 				4346C38B2AD73DA30058EE3E /* Frameworks */,
 				4346C38C2AD73DA30058EE3E /* Resources */,
-				4346C3D22AD74BDC0058EE3E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "application-iOS";
+			packageProductDependencies = (
+				4346C3D72AD79C6F0058EE3E /* XIBLoadablePackage */,
+			);
 			productName = "application-iOS";
 			productReference = 4346C38E2AD73DA30058EE3E /* application-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -257,6 +242,9 @@
 				Base,
 			);
 			mainGroup = 4346C3852AD73DA30058EE3E;
+			packageReferences = (
+				4346C3D62AD79C6F0058EE3E /* XCRemoteSwiftPackageReference "xcframework-package" */,
+			);
 			productRefGroup = 4346C38F2AD73DA30058EE3E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -651,6 +639,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4346C3D62AD79C6F0058EE3E /* XCRemoteSwiftPackageReference "xcframework-package" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/guilhermegff/xcframework-package";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4346C3D72AD79C6F0058EE3E /* XIBLoadablePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4346C3D62AD79C6F0058EE3E /* XCRemoteSwiftPackageReference "xcframework-package" */;
+			productName = XIBLoadablePackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4346C3862AD73DA30058EE3E /* Project object */;
 }
